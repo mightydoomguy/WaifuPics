@@ -2,7 +2,7 @@ WaifuPics
 App for viewing and downloading anime arts
 
 
-stack: 
+Libraries: 
 
 - [Dagger Hilt](https://dagger.dev/hilt/)
 - [Retrofit](https://lysine.dev/retrofit/)
