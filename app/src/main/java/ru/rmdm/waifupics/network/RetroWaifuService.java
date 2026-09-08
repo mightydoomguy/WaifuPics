@@ -7,8 +7,8 @@ import ru.rmdm.waifupics.model.WaifuResponse;
 
 public interface RetroWaifuService {
 
-    @GET("search")
+    @GET("images")
     Call<WaifuResponse> getImages(
-            @Query("is_nsfw") String isNsfw,
-            @Query("limit") Integer limit);
+            @Query("IsNsfw") String isNsfw,
+            @Query("PageSize") Integer limit);
 }

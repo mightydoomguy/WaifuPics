@@ -31,6 +31,6 @@ public class WaifuViewModel  extends ViewModel {
 
     public void makeApiCall(){
         RetroRepository retroRepository = new RetroRepository(retroWaifuService);
-        retroRepository.makeNsfwApiCall("false",13,liveData);
+        retroRepository.makeNsfwApiCall("true",20,liveData);
     }
 }
