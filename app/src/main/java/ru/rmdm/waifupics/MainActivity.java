@@ -13,6 +13,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Environment;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements OnImageItemLongCl
         rv_main.setAdapter(adapter);
         rv_main.setLayoutManager(new LinearLayoutManager(this));
         floatingActionButton = findViewById(R.id.fab);
+        Switch nsfw_switch = findViewById(R.id.nsfw_switch);
 
         viewModel.getLiveData().observe(this, new Observer<List<WaifuImage>>() {
             @Override
@@ -105,8 +107,13 @@ public class MainActivity extends AppCompatActivity implements OnImageItemLongCl
             });
 
             if (activeNetwork!=null && activeNetwork.isConnected()){
+                if (nsfw_switch.isChecked()){
+                    viewModel.makeApiSwitch("true");
+                    rv_main.smoothScrollToPosition(0);
+                } else {
                 viewModel.makeApiCall();
                 rv_main.smoothScrollToPosition(0);
+                }
             }
 
         });

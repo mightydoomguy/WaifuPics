@@ -30,5 +30,20 @@
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="334dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/fab">
+
+        <Switch
+            android:id="@+id/nsfw_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="NSFW" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
