@@ -35,7 +35,7 @@ public class AppModule {
     @Provides
     public Retrofit getRetroInstance(OkHttpClient client){
         return  new Retrofit.Builder()
-                .baseUrl("https://api.waifu.im/")
+                .baseUrl("https://waifu-api-031n.onrender.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
